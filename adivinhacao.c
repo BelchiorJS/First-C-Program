@@ -1,5 +1,7 @@
 #include <stdio.h>
-#include <locale.h>
+#include <locale.h> // Tudo que começa com # em C é uma diretiva
+#define NUMERO_DE_TENTATIVAS 9
+
 
 int main(){
 
@@ -14,9 +16,9 @@ int main(){
     printf("****************************************\n");
     
     // Loop que irá permitir 3 tentativas de chute
-    for(int i = 1; i <=3; i++) {
+    for(int i = 1; i <=NUMERO_DE_TENTATIVAS; i++) {
 
-        printf("Tentativa %d de 3\n", i);
+        printf("Tentativa %d de %d\n", i, NUMERO_DE_TENTATIVAS);
         printf("Qual é o seu chute?");
 
         scanf("%d", &chute); // Scanf lê o input do teclado
