@@ -1,47 +1,51 @@
 #include <stdio.h>
-#include <locale.h> // Tudo que começa com # em C é uma diretiva
-#define NUMERO_DE_TENTATIVAS 9
-
 
 int main(){
 
-    setlocale(LC_ALL, "pt_BR.UTF-8"); // Configura a localidade para português do Brasil
-
     int numerosecreto = 42;
+    int ganhou = 0;
     int chute;
-    
+    int tentativas = 1;
+
+
     // Imprime uma mensagem de boas-vindas
     printf("****************************************\n");
     printf("Bem-vindo ao jogo de adivinhacao!\n");
     printf("****************************************\n");
-    
-    // Loop que irá permitir 3 tentativas de chute
-    for(int i = 1; i <=NUMERO_DE_TENTATIVAS; i++) {
 
-        printf("Tentativa %d de %d\n", i, NUMERO_DE_TENTATIVAS);
-        printf("Qual é o seu chute?");
+
+   while(ganhou==0) {
+
+        printf("Tentativa %d\n", tentativas);
+        printf("Qual e o seu chute?");
 
         scanf("%d", &chute); // Scanf lê o input do teclado
         printf("Seu chute foi %d\n", chute);
 
         int acertou = (chute == numerosecreto);
+        int maior = chute > numerosecreto;
 
         if (acertou) {
-            printf("Parabéns! Você acertou o número secreto!\n");
+            printf("Parabens! Voce acertou o numero secreto!\n");
 
             break;
         }
 
         else {
 
-            int maior = chute > numerosecreto;
-
+            
             if(maior) {
-                printf("Seu chute foi maior que o número secreto!\n");
+                printf("Seu chute foi maior que o numero secreto!\n");
             } else {
-                printf("Seu chute foi menor que o número secreto!\n");
+                printf("Seu chute foi menor que o numero secreto!\n");
             }
         };
+
+        tentativas++; // Incrementa o número de tentativas
     }
-    printf("Fim de jogo");
+
+    printf("Fim de jogo\n");
+    printf("Voce acertou em %d tentativas!\n", tentativas);
+
 }
+
