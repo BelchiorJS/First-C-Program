@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../game/banner.svg" alt="Guessing Game Banner" width="100%">
+  <img src="/game/banner.svg" alt="Guessing Game Banner" width="100%">
 </p>
 
 <h1 align="center">🎮 Jogo de Adivinhação em C</h1>
@@ -112,7 +112,7 @@ Focado em projetos didáticos, claros e técnicos para evolução constante.
 
 # English Version 
 
-<p align="center"> <img src="banner.svg" alt="Guessing Game Banner" width="100%"> </p> <h1 align="center">🎮 Guessing Game in C</h1> <p align="center"> Developed by <strong>Guilherme Belchior</strong> </p>
+<p align="center"> <img src="game/banner.svg" alt="Guessing Game Banner" width="100%"> </p> <h1 align="center">🎮 Guessing Game in C</h1> <p align="center"> Developed by <strong>Guilherme Belchior</strong> </p>
 
 ## 🧩 About the Project
 
